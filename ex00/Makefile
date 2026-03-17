@@ -2,7 +2,7 @@
 # COMPILER OPTIONS
 ################################################################################
 
-NAME		=	megaphone
+NAME		=	Megaphone
 CC			=	g++
 CFLAGS		=	-Wall -Wextra -Werror -std=c++98
 RM			=	rm -rf
@@ -20,7 +20,7 @@ CLEAR	=		\033[0m
 ################################################################################
 
 # SOURCE
-SRC			=	megaphone.cpp
+SRC			=	Megaphone.cpp
 
 # OBJECTS
 OBJ_DIR		=	objs/
