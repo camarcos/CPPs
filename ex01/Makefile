@@ -20,8 +20,8 @@ CLEAR	=		\033[0m
 ################################################################################
 
 # SOURCE
-SRC			=	Contact.cpp
-				PhoneBook.cpp
+SRC			=	Contact.cpp \
+				PhoneBook.cpp \
 				main.cpp
 
 # OBJECTS
