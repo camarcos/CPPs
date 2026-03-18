@@ -5,7 +5,7 @@
 int main(void)
 {	
 	std::string	input;
-	phoneBook	book;
+	PhoneBook	book;
 
 	std::cout << std::endl;
 	std::cout << " Welcome to MyAwesomePhoneBook! 📞 " << std::endl;

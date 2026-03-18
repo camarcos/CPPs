@@ -88,29 +88,32 @@ PhoneBook::PhoneBook()
 PhoneBook::~PhoneBook() {}
 
 /* get total contacts */
-size_t	PhoneBook::getTotal()
+size_t PhoneBook::getTotal()
 {
-	return this->isFull ? MAX_CONTACTS : this->position;
+	if (this->isFull)
+		return MAX_CONTACTS;
+	else
+		return this->position;
 }
 
 /* add Contact */
 void	PhoneBook::add()
 {
-	std::string	name, lastName, nickName, phoneNumber, darkSecret;
+	std::string	Name, LastName, NickName, PhoneNumber, DarkSecret;
 
 	std::cout << "Please fill in the details of the new contact:" << std::endl;
-	name = askInfo("First Name: ");
-	lastName = askInfo("Last Name: ");
-	nickName = askInfo("Nick Name: ");
-	phoneNumber = askInfo("Phone number: ");
-	darkSecret = askInfo("Dark Secret: ");
+	Name = askInfo("First Name: ");
+	LastName = askInfo("Last Name: ");
+	NickName = askInfo("Nick Name: ");
+	PhoneNumber = askInfo("Phone number: ");
+	DarkSecret = askInfo("Dark Secret: ");
 
 	if (this->position == MAX_CONTACTS)
 	{
 		this->isFull = true;
 		this->position = 0;
 	}
-	this->contacts[position] = Contact(name, lastName, nickName, phoneNumber, darkSecret);
+	this->contacts[position] = Contact(Name, LastName, NickName, PhoneNumber, DarkSecret);
 	this->position++;
 	std::cout << "Contact added successfully!" << std::endl;
 }
@@ -118,11 +121,11 @@ void	PhoneBook::add()
 /* seach contact */
 void	PhoneBook::search()
 {
-	size_t		curr_index;
+	size_t		total_contacts;
 	std::string	index;
 
-	curr_index = this->getTotal();
-	if (curr_index == 0 && !this->isFull)
+	total_contacts = this->getTotal();
+	if (total_contacts == 0 && !this->isFull)
 	{
 		std::cout << "Contact list is empty! Add a new contact before checking the list." << std::endl;
 		return ;
@@ -132,7 +135,8 @@ void	PhoneBook::search()
 	std::cout << std::setfill(' ') << std::setw(11) << "Last Name|";
 	std::cout << std::setfill(' ') << std::setw(11) << "Nickname|" << std::endl;
 
-	for(size_t i = 0; i < curr_index; i++) {
+	for(size_t i = 0; i < total_contacts; i++) 
+	{
 		std::cout << "|" << std::setfill(' ') << std::setw(10) << i + 1 << "|";
 		std::cout << std::setfill(' ') << std::setw(10) << this->contacts[i].getName(true) << "|";
 		std::cout << std::setfill(' ') << std::setw(10) << this->contacts[i].getLastName(true) << "|";
