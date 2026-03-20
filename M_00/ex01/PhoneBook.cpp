@@ -77,17 +77,14 @@ static bool	isValidIndex(std::string index)
 	return true;
 }
 
-/* Constructor */
 PhoneBook::PhoneBook()
 {
 	this->position = 0;
 	this->isFull = false;
 }
 
-/* Destructor */
 PhoneBook::~PhoneBook() {}
 
-/* get total contacts */
 size_t PhoneBook::getTotal()
 {
 	if (this->isFull)
@@ -96,7 +93,6 @@ size_t PhoneBook::getTotal()
 		return this->position;
 }
 
-/* add Contact */
 void	PhoneBook::add()
 {
 	std::string	Name, LastName, NickName, PhoneNumber, DarkSecret;
@@ -118,7 +114,6 @@ void	PhoneBook::add()
 	std::cout << "Contact added successfully!" << std::endl;
 }
 
-/* seach contact */
 void	PhoneBook::search()
 {
 	size_t		total_contacts;
