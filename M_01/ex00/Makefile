@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/03/22 20:06:25 by carolinamc        #+#    #+#              #
-#    Updated: 2026/03/22 20:06:27 by carolinamc       ###   ########.fr        #
+#    Created: 2026/03/22 20:06:46 by carolinamc        #+#    #+#              #
+#    Updated: 2026/03/22 20:08:57 by carolinamc       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 # COMPILER OPTIONS
 ################################################################################
 
-NAME		=	Megaphone
+NAME		=	BraiiiiiiinnnzzzZ
 CC			=	g++
 CFLAGS		=	-Wall -Wextra -Werror -std=c++98
 RM			=	rm -rf
@@ -32,8 +32,8 @@ CLEAR	=		\033[0m
 ################################################################################
 
 # SOURCE
-SRC			=	Megaphone.cpp
-
+SRC			=	main.cpp \
+				----
 # OBJECTS
 OBJ_DIR		=	objs/
 OBJ_FILES	=	$(SRC:%.cpp=$(OBJ_DIR)%.o)
@@ -66,3 +66,6 @@ fclean: clean
 re: fclean all
 
 .PHONY:	all clean fclean re
+
+leaks: all
+	@leaks -q --atExit -- ./$(NAME)

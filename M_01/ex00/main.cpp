@@ -1,33 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Megaphone.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/22 20:04:41 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/03/22 20:04:56 by carolinamc       ###   ########.fr       */
+/*   Created: 2026/03/22 20:07:33 by carolinamc        #+#    #+#             */
+/*   Updated: 2026/03/22 20:07:34 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-
-int main(int ac, char **av)
-{
-	std::string str;
-
-	if (ac == 1)
-		str = "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
-	else
-	{
-		for (int i = 1; av[i]; i++)
-		{
-			for (int j = 0; av[i][j]; j++)
-			{
-				str.push_back(toupper(av[i][j]));
-			}
-		}
-	}
-	std::cout << str << std::endl;
-	return 0;
-}
