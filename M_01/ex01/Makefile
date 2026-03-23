@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/03/22 20:06:46 by carolinamc        #+#    #+#              #
-#    Updated: 2026/03/23 12:33:26 by carolinamc       ###   ########.fr        #
+#    Created: 2026/03/23 12:20:57 by carolinamc        #+#    #+#              #
+#    Updated: 2026/03/23 12:31:55 by carolinamc       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,8 +34,7 @@ CLEAR	=		\033[0m
 # SOURCE
 SRC			=	main.cpp \
 				Zombie.cpp \
-				newZombie.cpp \
-				randomChump.cpp \
+				
 # OBJECTS
 OBJ_DIR		=	objs/
 OBJ_FILES	=	$(SRC:%.cpp=$(OBJ_DIR)%.o)
