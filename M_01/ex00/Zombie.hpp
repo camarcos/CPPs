@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/22 20:07:33 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/03/23 11:49:07 by carolinamc       ###   ########.fr       */
+/*   Created: 2026/03/22 20:08:05 by carolinamc        #+#    #+#             */
+/*   Updated: 2026/03/23 11:40:20 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#pragma once
+#include <iostream>
 
-int main( void )
+class	Zombie 
 {
+	private:
+		std::string	name;
+	public:
+		Zombie(std::string name);
+		~Zombie( void );
 
-	Zombie zombie1("Lola");
-	Zombie zombie2 = Zombie("Marta");
-	Zombie *zombie3 = newZombie("Pepa");
+		void 		announce( void );
+};
 
-	randomChump("Carla");
-
-	zombie1.announce();
-	zombie2.announce();
-	zombie3->announce();
-
-	delete zombie3;
-
-	return 0;
-}
+Zombie*	newZombie( std::string name );
+void	randomChump( std::string name );
