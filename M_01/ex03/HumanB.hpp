@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/23 17:31:18 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/03/24 10:07:14 by carolinamc       ###   ########.fr       */
+/*   Created: 2026/03/24 10:37:09 by carolinamc        #+#    #+#             */
+/*   Updated: 2026/03/24 11:58:59 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #include <iostream>
+#include "Weapon.hpp"
 
-int	main( void )
+class HumanB
 {
-	std::string str = "HI THIS IS BRAIN";
-	std::string *stringPTR = &str;
-	std::string &stringREF = str;
+	private:
+		std::string name;
+		Weapon 		*weapon;
 
-	/* PRINT VALUES */
-	std::cout << str << std::endl;
-	std::cout << *stringPTR << std::endl;
-	std::cout << stringREF << std::endl;
+	public:
+		HumanB( std::string name );
+		~HumanB();
 
-	/* PRINT MEMORY ADDRESS */
-	std::cout << &str << std::endl;
-	std::cout << stringPTR << std::endl;
-	std::cout << &stringREF << std::endl;
-
-	return 0;
-}
+		void	attack( void );
+		void	setWeapon( Weapon &weapon );
+};

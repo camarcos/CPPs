@@ -5,28 +5,31 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/23 17:31:18 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/03/24 10:07:14 by carolinamc       ###   ########.fr       */
+/*   Created: 2026/03/24 10:13:35 by carolinamc        #+#    #+#             */
+/*   Updated: 2026/03/24 12:08:32 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
-int	main( void )
+int main()
 {
-	std::string str = "HI THIS IS BRAIN";
-	std::string *stringPTR = &str;
-	std::string &stringREF = str;
-
-	/* PRINT VALUES */
-	std::cout << str << std::endl;
-	std::cout << *stringPTR << std::endl;
-	std::cout << stringREF << std::endl;
-
-	/* PRINT MEMORY ADDRESS */
-	std::cout << &str << std::endl;
-	std::cout << stringPTR << std::endl;
-	std::cout << &stringREF << std::endl;
-
+	{
+		Weapon club = Weapon("crude spiked club");
+		HumanA lola("Lola", club);
+		lola.attack();
+		club.setType("some other type of club");
+		lola.attack();
+	}
+	{
+		Weapon club = Weapon("crude spiked club");
+		HumanB sara("Sara");
+		sara.setWeapon(club);
+		sara.attack();
+		club.setType("some other type of club");
+		sara.attack();
+	}
 	return 0;
 }

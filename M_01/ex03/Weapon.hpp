@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/23 17:31:18 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/03/24 10:07:14 by carolinamc       ###   ########.fr       */
+/*   Created: 2026/03/24 10:36:55 by carolinamc        #+#    #+#             */
+/*   Updated: 2026/03/24 11:56:26 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
+
 #include <iostream>
 
-int	main( void )
-{
-	std::string str = "HI THIS IS BRAIN";
-	std::string *stringPTR = &str;
-	std::string &stringREF = str;
+class	Weapon {
+	private:
+		std::string	type;
+	public:
+		Weapon();
+		Weapon( std::string type );
+		~Weapon();
 
-	/* PRINT VALUES */
-	std::cout << str << std::endl;
-	std::cout << *stringPTR << std::endl;
-	std::cout << stringREF << std::endl;
-
-	/* PRINT MEMORY ADDRESS */
-	std::cout << &str << std::endl;
-	std::cout << stringPTR << std::endl;
-	std::cout << &stringREF << std::endl;
-
-	return 0;
-}
+		std::string	getType( void ) const;
+		void		setType( std::string type );
+};
