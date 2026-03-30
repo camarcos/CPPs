@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/03/24 10:13:40 by carolinamc        #+#    #+#              #
-#    Updated: 2026/03/30 10:43:30 by carolinamc       ###   ########.fr        #
+#    Created: 2026/03/30 10:44:04 by carolinamc        #+#    #+#              #
+#    Updated: 2026/03/30 10:51:36 by carolinamc       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 # COMPILER OPTIONS
 ################################################################################
 
-NAME		=	Unnecessary
+NAME		=	SedIsForLosers
 CC			=	g++
 CFLAGS		=	-Wall -Wextra -Werror -std=c++98
 RM			=	rm -rf
@@ -33,9 +33,7 @@ CLEAR	=		\033[0m
 
 # SOURCE
 SRC			=	main.cpp \
-				Weapon.cpp \
-				HumanA.cpp \
-				HumanB.cpp \
+				File.cpp \
 
 # OBJECTS
 OBJ_DIR		=	objs/

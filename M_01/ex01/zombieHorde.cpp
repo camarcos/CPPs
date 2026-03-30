@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/23 12:34:56 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/03/23 17:40:34 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/03/30 12:39:01 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 Zombie* zombieHorde(int N, std::string name)
 {
-
 	Zombie *horde = new Zombie[N];
 
 	int i = 0;

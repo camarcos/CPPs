@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*   File.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/24 10:37:09 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/03/30 12:40:58 by carolinamc       ###   ########.fr       */
+/*   Created: 2026/03/30 10:51:16 by carolinamc        #+#    #+#             */
+/*   Updated: 2026/03/30 12:44:24 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <iostream>
-#include "Weapon.hpp"
+#include <fstream>
 
-class HumanB
+class	File
 {
 	private:
-		std::string name;
-		Weapon 		*weapon;
-
+		std::string	fileName;
+	
 	public:
-		HumanB(std::string name);
-		~HumanB();
+		File(std::string fileName);
+		~File();
 
-		void	attack(void);
-		void	setWeapon(Weapon &weapon);
+		std::string	readFromFile(void);
+		void		writeToFile(std::string content);
+		void		replaceString(std::string str1, std::string str2);
 };

@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 20:08:05 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/03/23 11:40:20 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/03/30 12:36:23 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ class	Zombie
 		Zombie(std::string name);
 		~Zombie( void );
 
-		void 		announce( void );
+		void 		announce(void);
 };
 
-Zombie*	newZombie( std::string name );
-void	randomChump( std::string name );
+Zombie*	newZombie(std::string name);
+void	randomChump(std::string name);

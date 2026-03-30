@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 12:26:50 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/03/24 12:50:51 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/03/30 12:42:54 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@
 class	Harl
 {
 	private:
-		void debug( void );
-		void info( void );
-		void warning( void );
-		void error( void );
+		void debug(void);
+		void info(void);
+		void warning(void);
+		void error(void);
 
 	public:
 		Harl();
 		~Harl();
-		void complain( std::string level );
+		void complain(std::string level);
 };

@@ -6,13 +6,13 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 20:07:33 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/03/23 16:45:48 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/03/30 12:37:10 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int main( void )
+int main(void)
 {
 	randomChump("Carla");
 

@@ -6,13 +6,13 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/23 17:31:18 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/03/24 10:07:14 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/03/30 12:39:23 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
-int	main( void )
+int	main(void)
 {
 	std::string str = "HI THIS IS BRAIN";
 	std::string *stringPTR = &str;
