@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   File.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
+/*   By: camarcos <camarcos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/30 10:51:16 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/03/30 12:44:24 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/03/30 16:09:41 by camarcos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <iostream>
 #include <fstream>
+#include <stdlib.h>
 
 class	File
 {

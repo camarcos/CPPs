@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   File.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
+/*   By: camarcos <camarcos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/30 10:51:01 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/03/30 13:13:18 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/03/30 16:22:45 by camarcos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ std::string	File::readFromFile(void)
 	std::string		content = "";
 	std::string		aux;
 
-	readFile.open(this->fileName, std::ios::in);
+	readFile.open(this->fileName.c_str(), std::ios::in);
 	if (!readFile.is_open())
 	{
 		std::cout << "Error: Cannot open the file specified." << std::endl;
@@ -46,7 +46,7 @@ void	File::writeToFile(std::string content)
 {	
 	std::ofstream	writeFile;
 
-	writeFile.open(this->fileName, std::ios::out | std::ios::trunc);
+	writeFile.open(this->fileName.c_str(), std::ios::out | std::ios::trunc);
 	if (!writeFile.is_open())
 	{
 		std::cout << "Error: Cannot open the file specified." << std::endl;
@@ -62,7 +62,7 @@ void	File::replaceString(std::string str1, std::string str2)
 	if (content.find(str1) == std::string::npos)
 		return ;
 
-	std::fstream	modFile(this->fileName, std::ios::out | std::ios::trunc);
+	std::fstream	modFile(this->fileName.c_str(), std::ios::out | std::ios::trunc);
 	if (!modFile.is_open())
 	{
 		std::cout << "Error: Cannot open the file specified." << std::endl;
