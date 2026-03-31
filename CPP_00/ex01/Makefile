@@ -6,7 +6,7 @@
 #    By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/03/22 20:05:49 by carolinamc        #+#    #+#              #
-#    Updated: 2026/03/22 20:05:51 by carolinamc       ###   ########.fr        #
+#    Updated: 2026/03/31 12:28:20 by carolinamc       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,8 @@
 ################################################################################
 
 NAME		=	phoneBook
-CC			=	g++
-CFLAGS		=	-Wall -Wextra -Werror -std=c++98
+CXX			=	c++
+CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM			=	rm -rf
 
 # COLORS

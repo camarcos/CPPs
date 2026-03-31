@@ -6,7 +6,7 @@
 #    By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/03/30 10:44:04 by carolinamc        #+#    #+#              #
-#    Updated: 2026/03/30 10:51:36 by carolinamc       ###   ########.fr        #
+#    Updated: 2026/03/31 12:32:31 by carolinamc       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,8 @@
 ################################################################################
 
 NAME		=	SedIsForLosers
-CC			=	g++
-CFLAGS		=	-Wall -Wextra -Werror -std=c++98
+CXX			=	c++
+CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM			=	rm -rf
 
 # COLORS

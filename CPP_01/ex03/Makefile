@@ -6,7 +6,7 @@
 #    By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/03/24 10:13:40 by carolinamc        #+#    #+#              #
-#    Updated: 2026/03/30 10:43:30 by carolinamc       ###   ########.fr        #
+#    Updated: 2026/03/31 12:29:48 by carolinamc       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,8 @@
 ################################################################################
 
 NAME		=	Unnecessary
-CC			=	g++
-CFLAGS		=	-Wall -Wextra -Werror -std=c++98
+CXX			=	c++
+CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM			=	rm -rf
 
 # COLORS
