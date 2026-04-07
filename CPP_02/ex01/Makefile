@@ -6,7 +6,7 @@
 #    By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/07 17:23:16 by carolinamc        #+#    #+#              #
-#    Updated: 2026/04/07 17:23:49 by carolinamc       ###   ########.fr        #
+#    Updated: 2026/04/07 17:26:59 by carolinamc       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 # COMPILER OPTIONS
 ################################################################################
 
-NAME		=	Cocf
+NAME		=	FixedPoint
 CXX			=	c++
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM			=	rm -rf
