@@ -6,7 +6,7 @@
 #    By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/03/23 17:31:20 by carolinamc        #+#    #+#              #
-#    Updated: 2026/04/07 10:41:03 by carolinamc       ###   ########.fr        #
+#    Updated: 2026/04/07 12:15:17 by carolinamc       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,12 +46,12 @@ all:	$(NAME)
 
 $(NAME): $(OBJ_FILES)
 	@echo "$(BLUE)Compiling $(NAME)...$(CLEAR)"
-	$(CC) $(OBJ_FILES) -o $(NAME)
+	$(CXX) $(OBJ_FILES) -o $(NAME)
 	@echo "$(GREEN)[$(NAME) --> OK]$(CLEAR)"
 
 $(OBJ_DIR)%.o: %.cpp
 	@mkdir -p $(OBJ_DIR)
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	@echo "$(BLUE)Removing compiled files...$(CLEAR)"
