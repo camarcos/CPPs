@@ -6,7 +6,7 @@
 #    By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/03/24 12:24:51 by carolinamc        #+#    #+#              #
-#    Updated: 2026/03/24 12:27:29 by carolinamc       ###   ########.fr        #
+#    Updated: 2026/04/07 10:40:31 by carolinamc       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,8 @@
 ################################################################################
 
 NAME		=	Harl
-CC			=	g++
-CFLAGS		=	-Wall -Wextra -Werror -std=c++98
+CXX			=	c++
+CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM			=	rm -rf
 
 # COLORS
