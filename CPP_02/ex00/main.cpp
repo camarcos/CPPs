@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/07 10:46:23 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/04/07 11:59:30 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/04/08 11:37:22 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 int main ( void )
 {
-
 	Fixed a;
 	Fixed b( a );
 	Fixed c;
@@ -23,10 +22,6 @@ int main ( void )
 	std::cout << a.getRawBits() << std::endl;
 	std::cout << b.getRawBits() << std::endl;
 	std::cout << c.getRawBits() << std::endl;
-
-	std::cout << &a << std::endl;
-	std::cout << &b << std::endl;
-	std::cout << &c << std::endl;
 
 	return 0;
 }

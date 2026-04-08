@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/07 17:26:35 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/04/07 18:17:53 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/04/08 12:05:28 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ Fixed::Fixed(): rawBits(0)
 
 Fixed::Fixed( const int nbr )
 {
-	std::cout << "INT constructor called" << std::endl;
+	std::cout << "Int constructor called" << std::endl;
 	this->rawBits = (nbr << fractionalBits);
 }
 
 Fixed::Fixed( const float nbr )
 {
-	std::cout << "FLOAT constructor called" << std::endl;
+	std::cout << "Float constructor called" << std::endl;
 	this->rawBits = roundf( nbr * (1 << fractionalBits) );
 }
 
