@@ -6,11 +6,13 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/10 11:15:35 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/04/10 11:53:50 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/04/10 12:27:09 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+
+const int Fixed:: _fractionalBits = 8;
 
 /* Orthodox Canonical Class Form */
 Fixed::Fixed(): _rawBits(0) {}
