@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/07 17:23:09 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/04/08 11:52:04 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/04/10 11:54:06 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 class	Fixed
 {
 	private:
-		int					rawBits;
-		static int const	fractionalBits;
+		int					_rawBits;
+		static int const	_fractionalBits;
 
 	public:
 		Fixed();
