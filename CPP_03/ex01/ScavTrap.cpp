@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 12:54:51 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/04/15 16:58:14 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/04/15 17:47:33 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,8 +88,8 @@ void	ScavTrap::attack( const std::string& target )
 
 void	ScavTrap::guardGate()
 {
-	if (this->getHP() != 0)
-		std::cout << this->_name << " ScavTrap is now in Gate Keeper mode" << std::endl;
-	else
+	if (this->getHP() == 0)
 		std::cout << this->_name << " ScavTrap cannot be in Gate Keeper mode. It's dead" << std::endl;
+	else
+		std::cout << this->_name << " ScavTrap is now in Gate Keeper mode" << std::endl;
 }

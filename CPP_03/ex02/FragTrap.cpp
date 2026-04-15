@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 13:22:56 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/04/15 17:18:13 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/04/15 17:55:34 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,8 @@ FragTrap::FragTrap( const FragTrap& other ) : ClapTrap()
 
 FragTrap& FragTrap::operator=( const FragTrap& other )
 {
-	if (this != &other) {
+	if (this != &other)
+	{
 		this->_name = other.getName();
 		this->_hitPoints = other.getHP();
 		this->_energyPoints = other.getEP();
@@ -62,15 +63,18 @@ FragTrap::~FragTrap()
 /* Public Methods */
 void	FragTrap::attack( const std::string& target )
 {	
-	if (target.empty()) {
+	if (target.empty())
+	{
 		std::cout << this->_name << " FragTrap failed to attack, no target specified\n";
 		return ;
 	}
-	if (this->getHP() == 0) {
+	if (this->getHP() == 0)
+	{
 		std::cout << this->_name << " FragTrap cannot attack because it has no HP\n";
 		return ;
 	}
-	if (this->getEP() == 0) {
+	if (this->getEP() == 0)
+	{
 		std::cout << this->_name << " FragTrap cannot attack because it has no EP\n";
 		return ;
 	}
@@ -83,8 +87,8 @@ void	FragTrap::attack( const std::string& target )
 
 void	FragTrap::highFivesGuys()
 {
-	if (this->getHP() != 0)
-		std::cout << this->_name << " FragTrap: Hey there! Can I get a high five?" << std::endl;
-	else
+	if (this->getHP() == 0)
 		std::cout << this->_name << " FragTrap cannot get a high five because is dead :(" << std::endl;
+	else
+		std::cout << this->_name << " FragTrap: Hey there! Can I get a high five?" << std::endl;
 }
