@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/15 12:54:48 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/04/15 13:13:38 by carolinamc       ###   ########.fr       */
+/*   Created: 2026/04/15 12:53:09 by carolinamc        #+#    #+#             */
+/*   Updated: 2026/04/15 16:50:59 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-class	ScavTrap : public ClapTrap
+int main()
 {
-	public:
-		ScavTrap();
-		ScavTrap( std::string _name );
-		ScavTrap( const ScavTrap& other );
-		ScavTrap& operator=( const ScavTrap& other );
-		~ScavTrap();
+	FragTrap a;
+	FragTrap b("Lola");
+	FragTrap c(b);
+	FragTrap d;
 
-		void	attack( const std::string& target );
-		void	guardGate( void );
-};
+	a.attack("Alex");
+	b.attack("Miguel");
+	c.attack("Javier");
+	a.takeDamage(10);
+	a.beRepaired(10);
+	b.takeDamage(5);
+	b.beRepaired(10);
+	c.takeDamage(200);
+	c.beRepaired(10);
+	c.highFivesGuys();
+}
