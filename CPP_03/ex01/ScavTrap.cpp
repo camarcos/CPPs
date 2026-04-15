@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 12:54:51 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/04/15 13:17:28 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/04/15 16:58:14 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,80 +16,80 @@
 /* Orthodox canonical Class */
 ScavTrap::ScavTrap()
 {
-	this->hitPoints = 100;
-	this->energyPoints = 50;
-	this->attackDamage = 20;
-	this->maxHitPoints = 100;
+	this->_hitPoints = 100;
+	this->_energyPoints = 50;
+	this->_attackDamage = 20;
+	this->_maxHitPoints = 100;
 
 	std::cout << "Default ScavTrap created" << std::endl;
 }
 
 ScavTrap::ScavTrap( std::string _name ): ClapTrap(_name)
 {
-	this->name = _name;
-	this->hitPoints = 100;
-	this->energyPoints = 50;
-	this->attackDamage = 20;
-	this->maxHitPoints = 100;
+	this->_name = _name;
+	this->_hitPoints = 100;
+	this->_energyPoints = 50;
+	this->_attackDamage = 20;
+	this->_maxHitPoints = 100;
 	
-	std::cout << this->name << " ScavTrap created" << std::endl;
-
+	std::cout << this->_name << " ScavTrap created" << std::endl;
 }
 
 ScavTrap::ScavTrap( const ScavTrap& other ) : ClapTrap()
 {
-	std::cout << other.name << " ScavTrap created with copy constructor" << std::endl;
+	std::cout << other._name << " ScavTrap created with copy constructor" << std::endl;
 	*this = other;
 }
 
 ScavTrap& ScavTrap::operator=( const ScavTrap& other )
 {
 	if (this != &other) {
-		this->name = other.getName();
-		this->hitPoints = other.getHP();
-		this->energyPoints = other.getEP();
-		this->attackDamage = other.getAD();
-		this->maxHitPoints = other.getMaxHP();
+		this->_name = other.getName();
+		this->_hitPoints = other.getHP();
+		this->_energyPoints = other.getEP();
+		this->_attackDamage = other.getAD();
+		this->_maxHitPoints = other.getMaxHP();
 	}
 
-	std::cout << this->name << " ScavTrap created with copy assignment operator" << std::endl;
+	std::cout << this->_name << " ScavTrap created with copy assignment operator" << std::endl;
 
 	return *this;
 }
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << this->name << " ScavTrap destroyed" << std::endl;
+	std::cout << this->_name << " ScavTrap destroyed" << std::endl;
 }
 
 /* Public Methods */
 void	ScavTrap::attack( const std::string& target )
 {	
-	if (target.empty()) {
-		std::cout << this->name << " ScavTrap failed to attack, no target specified\n";
+	if (target.empty())
+	{
+		std::cout << this->_name << " ScavTrap failed to attack, no target specified\n";
 		return ;
 	}
 	if (this->getHP() == 0)
 	{
-		std::cout << this->name << " ScavTrap cannot attack because it has no HP\n";
+		std::cout << this->_name << " ScavTrap cannot attack because it has no HP\n";
 		return ;
 	}
 	if (this->getEP() == 0)
 	{
-		std::cout << this->name << " ScavTrap cannot attack because it has no EP\n";
+		std::cout << this->_name << " ScavTrap cannot attack because it has no EP\n";
 		return ;
 	}
-	this->energyPoints--;
+	this->_energyPoints--;
 
-	std::cout << this->name << " ScavTrap";
+	std::cout << this->_name << " ScavTrap";
 	std::cout << " attacks " << target;
-	std::cout << " causing " << this->attackDamage << " points of damage!" << std::endl;
+	std::cout << " causing " << this->_attackDamage << " points of damage!" << std::endl;
 }
 
 void	ScavTrap::guardGate()
 {
 	if (this->getHP() != 0)
-		std::cout << this->name << " ScavTrap is now in Gate Keeper mode" << std::endl;
+		std::cout << this->_name << " ScavTrap is now in Gate Keeper mode" << std::endl;
 	else
-		std::cout << this->name << " ScavTrap cannot be in Gate Keeper mode. It's dead" << std::endl;
+		std::cout << this->_name << " ScavTrap cannot be in Gate Keeper mode. It's dead" << std::endl;
 }

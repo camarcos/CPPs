@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 12:54:57 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/04/15 15:42:48 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/04/15 17:07:56 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ ClapTrap::ClapTrap( const ClapTrap& other )
 
 ClapTrap& ClapTrap::operator=( const ClapTrap& other )
 {
-	if (this != &other) {
+	if (this != &other)
+	{
 		this->_name = other.getName();
 		this->_hitPoints = other.getHP();
 		this->_energyPoints = other.getEP();
@@ -51,7 +52,6 @@ ClapTrap::~ClapTrap()
 /* Methods */
 void	ClapTrap::attack(const std::string& target)
 {
-	
 	if (target.empty())
 	{
 		std::cout << this->_name << " failed to attack, no target specified\n";
@@ -81,7 +81,6 @@ void ClapTrap::takeDamage(unsigned int amount)
 		std::cout << this->_name << " it's already dead!\n";
 		return;
 	}
-
 	if (amount > this->getHP())
 		this->setHP(0);
 	else
@@ -130,6 +129,7 @@ std::string		ClapTrap::getName( void ) const { return this->_name; }
 unsigned int	ClapTrap::getHP( void ) const { return this->_hitPoints; }
 unsigned int	ClapTrap::getEP( void ) const { return  this->_energyPoints; }
 unsigned int	ClapTrap::getAD( void ) const { return  this->_attackDamage; }
+unsigned int	ClapTrap::getMaxHP( void ) const { return this->_maxHitPoints; }
 
 /* Setters */
 void	ClapTrap::setName( std::string name ) { this->_name = name; }

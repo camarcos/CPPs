@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 12:54:54 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/04/15 15:41:28 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/04/15 16:58:30 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 #include <iostream>
 
-class	ClapTrap {
+class	ClapTrap
+{
 	protected:
 		std::string		_name;
 		unsigned int	_hitPoints;
