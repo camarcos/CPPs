@@ -6,7 +6,7 @@
 #    By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/15 12:53:00 by carolinamc        #+#    #+#              #
-#    Updated: 2026/04/15 13:27:30 by carolinamc       ###   ########.fr        #
+#    Updated: 2026/04/15 17:12:58 by carolinamc       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 # COMPILER OPTIONS
 ################################################################################
 
-NAME		=	Aaand_OPEN
+NAME		=	Repetitive_Work
 CXX			=	c++
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM			=	rm -rf

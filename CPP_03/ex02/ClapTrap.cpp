@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 12:54:57 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/04/15 12:55:24 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/04/15 17:19:29 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,6 +130,7 @@ std::string		ClapTrap::getName( void ) const { return this->_name; }
 unsigned int	ClapTrap::getHP( void ) const { return this->_hitPoints; }
 unsigned int	ClapTrap::getEP( void ) const { return  this->_energyPoints; }
 unsigned int	ClapTrap::getAD( void ) const { return  this->_attackDamage; }
+unsigned int	ClapTrap::getMaxHP( void ) const { return this->_maxHitPoints; }
 
 /* Setters */
 void	ClapTrap::setName( std::string name ) { this->_name = name; }
