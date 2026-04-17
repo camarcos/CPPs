@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 18:51:56 by camarcos          #+#    #+#             */
-/*   Updated: 2026/04/17 09:09:49 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/04/17 13:54:37 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int main()
 	delete meta;
 	delete j;
 	delete i;
-    
+
 	std::cout << std::endl << "--- WrongAnimal test ---" << std::endl;
 	const WrongAnimal* wrongMeta = new WrongAnimal();
 	const WrongAnimal* wrongCat = new WrongCat();

@@ -6,14 +6,15 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 18:59:07 by camarcos          #+#    #+#             */
-/*   Updated: 2026/04/17 09:07:48 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/04/17 13:53:00 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
 /* Orthodox canonical class form */
-Dog::Dog() {
+Dog::Dog()
+{
 	this->type = "Dog";
 	std::cout << "Default Dog constructor called" << std::endl;
 }

@@ -6,24 +6,27 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 18:59:07 by camarcos          #+#    #+#             */
-/*   Updated: 2026/04/17 09:07:48 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/04/17 13:53:56 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
 /* Orthodox canonical class form */
-Dog::Dog() {
+Dog::Dog()
+{
 	this->type = "Dog";
 	std::cout << "Default Dog constructor called" << std::endl;
 }
 
-Dog::Dog( const Dog& other ) : Animal() {
+Dog::Dog( const Dog& other ) : Animal()
+{
 	std::cout << "Default Dog copy constructor called" << std::endl;
 	*this = other;
 }
 
-Dog& Dog::operator=( const Dog& other ) {
+Dog& Dog::operator=( const Dog& other )
+{
 	std::cout << "Default Dog copy assignment operator called" << std::endl;
 	
 	if (this != &other)
@@ -31,7 +34,8 @@ Dog& Dog::operator=( const Dog& other ) {
 	return *this;
 }
 
-Dog::~Dog() {
+Dog::~Dog()
+{
 	std::cout << "Default Dog destructor called" << std::endl;
 }
 
