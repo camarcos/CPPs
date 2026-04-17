@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: camarcos <camarcos@student.42.fr>          +#+  +:+       +#+         #
+#    By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/15 18:51:59 by camarcos          #+#    #+#              #
-#    Updated: 2026/04/15 19:00:05 by camarcos         ###   ########.fr        #
+#    Updated: 2026/04/17 16:59:27 by carolinamc       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 # COMPILER OPTIONS
 ################################################################################
 
-NAME		=	Repetitive_Work
+NAME		=	Polymorphism
 CXX			=	c++
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM			=	rm -rf
@@ -33,6 +33,7 @@ CLEAR	=		\033[0m
 
 # SOURCE
 SRC			=	main.cpp \
+				Animal.cpp \
 				Dog.cpp \
 				Cat.cpp \
 				WrongAnimal.cpp \

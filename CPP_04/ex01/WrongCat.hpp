@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 18:59:23 by camarcos          #+#    #+#             */
-/*   Updated: 2026/04/17 13:59:49 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/04/17 16:49:12 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 #include "WrongAnimal.hpp"
 
-class	WrongCat : public WrongAnimal
-{
+class	WrongCat : public WrongAnimal {
+
 	public:
 		WrongCat();
 		WrongCat( const WrongCat& other );
@@ -23,4 +23,5 @@ class	WrongCat : public WrongAnimal
 		~WrongCat();
 
 		void	makeSound( void ) const;
+
 };

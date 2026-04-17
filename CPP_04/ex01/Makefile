@@ -6,7 +6,7 @@
 #    By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/17 09:13:15 by carolinamc        #+#    #+#              #
-#    Updated: 2026/04/17 09:14:03 by carolinamc       ###   ########.fr        #
+#    Updated: 2026/04/17 16:59:56 by carolinamc       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 # COMPILER OPTIONS
 ################################################################################
 
-NAME		=	Repetitive_Work
+NAME		=	Brain
 CXX			=	c++
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM			=	rm -rf
@@ -33,6 +33,7 @@ CLEAR	=		\033[0m
 
 # SOURCE
 SRC			=	main.cpp \
+				Animal.cpp \
 				Dog.cpp \
 				Cat.cpp \
 				WrongAnimal.cpp \

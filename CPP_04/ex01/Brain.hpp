@@ -6,18 +6,17 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/17 09:14:49 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/04/17 13:57:50 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/04/17 17:01:24 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-
 #include <iostream>
 
 #define MAX_IDEAS 100
 
-class Brain
-{
+class Brain {
+
 	private:
 		std::string ideas[MAX_IDEAS];
 

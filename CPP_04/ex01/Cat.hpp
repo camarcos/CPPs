@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 18:58:59 by camarcos          #+#    #+#             */
-/*   Updated: 2026/04/17 14:18:41 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/04/17 16:47:37 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,11 @@
 #include "Animal.hpp"
 #include "Brain.hpp"
 
-class	Cat : public Animal
-{
+class	Cat : public Animal {
+
+	private:
+		Brain *brain;
+
 	public:
 		Cat();
 		Cat( const Cat& other );
@@ -24,4 +27,7 @@ class	Cat : public Animal
 		~Cat();
 
 		void	makeSound( void ) const;
+		void	addIdea( std::string idea, int index );
+		void	getIdea( int index ) const;
+
 };

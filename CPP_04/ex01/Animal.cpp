@@ -6,26 +6,23 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 18:58:50 by camarcos          #+#    #+#             */
-/*   Updated: 2026/04/17 12:45:24 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/04/17 16:45:11 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
 /* Orthodox canonical class form */
-Animal::Animal(): type("No type specified")
-{
+Animal::Animal(): type("No type specified") {
 	std::cout << "Default Animal constructor called" << std::endl;
 }
 
-Animal::Animal( const Animal& other )
-{
+Animal::Animal( const Animal& other ) {
 	std::cout << "Default Animal copy constructor called" << std::endl;
 	*this = other;
 }
 
-Animal& Animal::operator=( const Animal& other )
-{
+Animal& Animal::operator=( const Animal& other ) {
 	std::cout << "Default Animal copy assignment operator called" << std::endl;
 	
 	if (this != &other)
@@ -33,8 +30,7 @@ Animal& Animal::operator=( const Animal& other )
 	return *this;
 }
 
-Animal::~Animal()
-{
+Animal::~Animal() {
 	std::cout << "Default Animal destructor called" << std::endl;
 }
 
