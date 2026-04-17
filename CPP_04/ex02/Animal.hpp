@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 18:58:53 by camarcos          #+#    #+#             */
-/*   Updated: 2026/04/17 09:07:11 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/04/17 17:04:22 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ class	Animal {
 		virtual ~Animal();
 
 		std::string	getType( void ) const;
-		virtual void		makeSound( void ) const;
+		virtual void		makeSound( void ) const = 0;
 
 };

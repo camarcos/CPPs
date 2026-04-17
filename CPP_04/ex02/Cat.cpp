@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 18:58:56 by camarcos          #+#    #+#             */
-/*   Updated: 2026/04/17 09:07:23 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/04/17 17:05:04 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,11 @@
 /* Orthodox canonical class form */
 Cat::Cat() {
 	this->type = "Cat";
+	this->brain = new Brain();
 	std::cout << "Default Cat constructor called" << std::endl;
 }
 
-Cat::Cat( const Cat& other ) : Animal() {
+Cat::Cat( const Cat& other ) : Animal(), brain( new Brain ) {
 	std::cout << "Default Cat copy constructor called" << std::endl;
 	*this = other;
 }
@@ -26,14 +27,19 @@ Cat::Cat( const Cat& other ) : Animal() {
 Cat& Cat::operator=( const Cat& other ) {
 	std::cout << "Default Cat copy assignment operator called" << std::endl;
 	
-	if (this != &other)
+	if (this != &other) {
 		this->type = other.type;
+		*(this->brain) = *(other.brain);
+	}
 	return *this;
 }
 
 Cat::~Cat() {
 	std::cout << "Default Cat destructor called" << std::endl;
+	delete brain;
 }
 
 /* Public Methods */
 void	Cat::makeSound() const { std::cout << "Meowwwww Meowwwww" << std::endl; }
+void	Cat::addIdea( std::string idea, int index ) { brain->addIdea( idea, index ); }
+void	Cat::getIdea( int index ) const { brain->getIdea( index ); }

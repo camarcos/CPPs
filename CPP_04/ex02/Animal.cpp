@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 18:58:50 by camarcos          #+#    #+#             */
-/*   Updated: 2026/04/17 09:06:58 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/04/17 17:04:10 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,3 @@ Animal::~Animal() {
 
 /* Public Methods */
 std::string	Animal::getType() const { return this->type; }
-void	Animal::makeSound() const { std::cout << "No sound sorry" << std::endl; }
