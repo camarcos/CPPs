@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 18:59:09 by camarcos          #+#    #+#             */
-/*   Updated: 2026/04/17 09:07:59 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/04/17 13:58:53 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 #include "Animal.hpp"
 
-class	Dog : public Animal {
-
+class	Dog : public Animal
+{
 	public:
 		Dog();
 		Dog( const Dog& other );
@@ -23,5 +23,4 @@ class	Dog : public Animal {
 		~Dog();
 
 		void	makeSound( void ) const;
-
 };

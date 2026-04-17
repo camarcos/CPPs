@@ -6,24 +6,27 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 18:58:56 by camarcos          #+#    #+#             */
-/*   Updated: 2026/04/17 09:07:23 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/04/17 13:58:08 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
 /* Orthodox canonical class form */
-Cat::Cat() {
+Cat::Cat()
+{
 	this->type = "Cat";
 	std::cout << "Default Cat constructor called" << std::endl;
 }
 
-Cat::Cat( const Cat& other ) : Animal() {
+Cat::Cat( const Cat& other ) : Animal()
+{
 	std::cout << "Default Cat copy constructor called" << std::endl;
 	*this = other;
 }
 
-Cat& Cat::operator=( const Cat& other ) {
+Cat& Cat::operator=( const Cat& other )
+{
 	std::cout << "Default Cat copy assignment operator called" << std::endl;
 	
 	if (this != &other)
@@ -31,7 +34,8 @@ Cat& Cat::operator=( const Cat& other ) {
 	return *this;
 }
 
-Cat::~Cat() {
+Cat::~Cat()
+{
 	std::cout << "Default Cat destructor called" << std::endl;
 }
 

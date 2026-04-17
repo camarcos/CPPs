@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 18:59:17 by camarcos          #+#    #+#             */
-/*   Updated: 2026/04/17 09:08:25 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/04/17 13:59:20 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 #include <iostream>
 
-class	WrongAnimal {
+class	WrongAnimal
+{
 	protected:
 		std::string type;
 
@@ -26,5 +27,4 @@ class	WrongAnimal {
 
 		void		makeSound( void ) const;
 		std::string	getType( void ) const;
-
 };
