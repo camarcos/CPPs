@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 15:31:45 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/06/02 10:52:07 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/06/03 14:02:50 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ Bureaucrat::Bureaucrat(const std::string& name, int grade) : _name(name)
 
 Bureaucrat::Bureaucrat( const Bureaucrat& other ) : _name(other._name), _grade(other._grade) {}
 
-Bureaucrat& Bureaucrat::operator=( const Bureaucrat& other ) {
+Bureaucrat& Bureaucrat::operator=( const Bureaucrat& other )
+{
 	if (this != &other)
 		this->_grade = other.getGrade();
 	return *this;
@@ -47,13 +48,15 @@ const char* Bureaucrat::GradeTooLowException::what() const throw()
 }
 
 /* Public Methods */
-void	Bureaucrat::incrementGrade() {
+void	Bureaucrat::incrementGrade()
+{
 	if (this->_grade == 1)
 		throw Bureaucrat::GradeTooHighException();
 	this->_grade--;
 }
 
-void	Bureaucrat::decrementGrade() {
+void	Bureaucrat::decrementGrade()
+{
 	if (this->_grade == 150)
 		throw Bureaucrat::GradeTooLowException();
 	this->_grade++;
@@ -64,7 +67,8 @@ std::string const Bureaucrat::getName() const { return this->_name; }
 unsigned int Bureaucrat::getGrade() const { return this->_grade; }
 
 /* << operator overload */
-std::ostream& operator<<( std::ostream& op, const Bureaucrat& bureaucrat ) {
+std::ostream& operator<<( std::ostream& op, const Bureaucrat& bureaucrat )
+{
 	op << bureaucrat.getName() << ", bureaucrat grade " << bureaucrat.getGrade();
 	return op;
 }

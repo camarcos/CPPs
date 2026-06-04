@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 15:31:45 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/06/03 14:02:24 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/06/04 12:19:36 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,27 @@ void	Bureaucrat::decrementGrade()
 	this->_grade++;
 }
 
+void	Bureaucrat::signForm( AForm& form ) const
+{
+	try
+	{
+		form.beSigned( *this );
+		std::cout << this->_name << " signed " << form.getName() << '\n'; 
+	} catch (std::exception &e)
+	{
+		std::cout << this->_name << " couldn't sign " << form.getName() << " because " << e.what() << '\n';
+	}
+}
+
+void	Bureaucrat::executeForm( AForm const& form ) const
+{
+	try {
+		form.execute( *this );
+		std::cout << this->_name << " executed " << form.getName() << '\n';
+	} catch (std::exception& e) {
+		std::cout << this->getName() << " cannot execute the form because " << e.what() << '\n';
+	}
+}
 /* Getters */
 std::string const Bureaucrat::getName() const { return this->_name; }
 unsigned int Bureaucrat::getGrade() const { return this->_grade; }
