@@ -6,15 +6,15 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 12:41:27 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/06/04 15:32:02 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/06/05 11:07:03 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
+#include "AForm.hpp"
 #include <iostream>
 #include <cstdlib>
-#include "AForm.hpp"
 
 #define SIGN_ROBOTOMY 72
 #define EXEC_ROBOTOMY 45

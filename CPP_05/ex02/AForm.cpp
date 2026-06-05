@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 12:07:28 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/06/04 12:37:55 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/06/05 11:11:37 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ AForm::~AForm() {}
 /* Exceptions */
 const char* AForm::AlreadySingedException::what() const throw()
 {
-	return "form is already signed";
+	return "Form is already signed";
 }
 
 /* Public Methods */
