@@ -6,11 +6,12 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 12:07:28 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/06/05 11:11:37 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/06/05 12:55:39 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AForm.hpp"
+#include "Bureaucrat.hpp"
 
 /* OCCF */
 AForm::AForm(): name("Default"), target("Default_form"), isSigned(false), signGrade(1), execGrade(1) {}

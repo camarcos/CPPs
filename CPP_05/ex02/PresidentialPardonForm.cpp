@@ -6,11 +6,12 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 12:40:20 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/06/05 11:07:32 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/06/05 13:46:17 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
+#include "Bureaucrat.hpp"
 
 /* OCCF */
 PresidentialPardonForm::PresidentialPardonForm(): AForm("presidential pardon form", "Default_target", SIGN_PRESIDENTIAL, EXEC_PRESIDENTIAL) {}

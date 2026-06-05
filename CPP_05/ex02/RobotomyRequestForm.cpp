@@ -6,11 +6,12 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 12:41:30 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/06/04 16:00:55 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/06/05 13:46:10 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
+#include "Bureaucrat.hpp"
 
 /* OCCF*/
 RobotomyRequestForm::RobotomyRequestForm(): AForm("robotomy request form", "Default_target", SIGN_ROBOTOMY, EXEC_ROBOTOMY) {}

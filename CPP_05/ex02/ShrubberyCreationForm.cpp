@@ -6,11 +6,12 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 12:41:18 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/06/05 10:32:09 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/06/05 13:45:44 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
+#include "Bureaucrat.hpp"
 
 /* OCCF */
 ShrubberyCreationForm::ShrubberyCreationForm(): AForm("Shrubbery creation form", "Default_target", SIGN_SHRUBBERY, EXEC_SHRUBBERY) {}

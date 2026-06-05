@@ -6,14 +6,13 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 12:07:30 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/06/04 12:33:34 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/06/05 12:55:11 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
-#include "Bureaucrat.hpp"
 
 class Bureaucrat;
 

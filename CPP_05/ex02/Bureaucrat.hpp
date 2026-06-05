@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 15:31:40 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/06/04 12:11:44 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/06/05 12:57:51 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 #include <iostream>
 #include <string>
 #include <exception>
-#include "AForm.hpp"
+
+class AForm;
 
 class Bureaucrat
 {

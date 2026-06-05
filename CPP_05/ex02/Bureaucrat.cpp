@@ -6,11 +6,12 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 15:31:45 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/06/04 12:19:36 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/06/05 12:55:25 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "AForm.hpp"
 
 /* Orthodox Canonical Class Form */
 Bureaucrat::Bureaucrat() : _name("Default"), _grade(150) {}
