@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 12:41:18 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/06/05 13:45:44 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/06/09 09:51:52 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,8 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 	file << "    /****\\        /****\\       /****\\\n";
 	file << "   /******\\      /******\\     /******\\\n";
 	file << "  /********\\    /********\\   /********\\\n";
-	file << "      ||            ||            ||\n";
-	file << "      ||            ||            ||\n";
+	file << "      ||            ||           ||\n";
+	file << "      ||            ||           ||\n";
 
 	file.close();
 }
