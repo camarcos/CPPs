@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 12:07:30 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/06/05 12:55:11 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/06/09 13:26:11 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,6 @@ class AForm
 		bool	isSigned;
 		const unsigned int signGrade;
 		const unsigned int execGrade;
-		
-		/* Exceptions */
-		class AlreadySingedException : public std::exception
-		{
-			const char* what() const throw();
-		};
 
 	public:
 		/* Orthodox Canonical Class Form */
@@ -38,7 +32,7 @@ class AForm
 		AForm ( const AForm& other );
 		AForm& operator=( const AForm& other );
 		virtual ~AForm();
-
+		
 		/* Exceptions */
 		class GradeTooHighException : public std::exception
 		{
@@ -54,6 +48,10 @@ class AForm
 				return "grade too low";
 			}
 		};
+		class AlreadySingedException : public std::exception
+		{
+			const char* what() const throw();
+		};
 		class FormNotSignedException : public std::exception
 		{
 			const char* what() const throw()
@@ -61,19 +59,16 @@ class AForm
 				return "form is not signed";
 			}
 		};
-
+		
 		/* Public Methods */
 		std::string getName() const;
 		std::string getTarget() const;
 		const bool& getIsSigned() const;
 		const unsigned int& getSignGrade() const;
 		const unsigned int& getExecGrade() const;
-
 		void setIsSigned( bool sign );
-
 		void beSigned( const Bureaucrat& bureaucrat );
 		virtual void execute(Bureaucrat const & executor) const = 0;
 };
-
 /* << operator overload */
 std::ostream& operator<<(std::ostream& op, const AForm& form );

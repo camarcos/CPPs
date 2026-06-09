@@ -6,11 +6,12 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 15:31:45 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/06/03 14:02:24 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/06/09 13:23:06 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 /* Orthodox Canonical Class Form */
 Bureaucrat::Bureaucrat() : _name("Default"), _grade(150) {}
@@ -61,6 +62,20 @@ void	Bureaucrat::decrementGrade()
 		throw Bureaucrat::GradeTooLowException();
 	this->_grade++;
 }
+
+void	Bureaucrat::signForm( Form& form ) const
+{
+	try
+	{
+		form.beSigned( *this );
+		std::cout << this->_name << " signed " << form.getName() << '\n'; 
+	}
+	catch (std::exception &e)
+	{
+		std::cout << this->_name << " couldn't sign " << form.getName() << " because " << e.what() << '\n';
+	}
+}
+
 
 /* Getters */
 std::string const Bureaucrat::getName() const { return this->_name; }

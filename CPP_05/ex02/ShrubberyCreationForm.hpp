@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 12:41:21 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/06/05 11:07:17 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/06/09 13:28:05 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,6 @@
 
 class ShrubberyCreationForm : public AForm
 {
-	private:
-		/* Exceptions */
-		class FileNotOpenException : public std::exception
-		{
-			const char* what() const throw();
-		};
 	public:
 		/* OCCF */
 		ShrubberyCreationForm();
@@ -35,6 +29,12 @@ class ShrubberyCreationForm : public AForm
 		ShrubberyCreationForm& operator=( const ShrubberyCreationForm& other );
 		~ShrubberyCreationForm();
 
+		/* Exceptions */
+		class FileNotOpenException : public std::exception
+		{
+			const char* what() const throw();
+		};
+		
 		/* Public Methods */
-		virtual void execute(Bureaucrat const & executor) const;
+			virtual void execute(Bureaucrat const & executor) const;
 };

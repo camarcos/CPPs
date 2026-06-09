@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 12:07:28 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/06/05 12:55:39 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/06/09 13:49:11 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 /* OCCF */
 AForm::AForm(): name("Default"), target("Default_form"), isSigned(false), signGrade(1), execGrade(1) {}
 
-AForm::AForm( std::string _name, std::string _target, int _signGrade, int _execGrade ): name(_name), target(_target), signGrade(_signGrade), execGrade(_execGrade)
+AForm::AForm( std::string _name, std::string _target, int _signGrade, int _execGrade ): name(_name), target(_target), isSigned(false), signGrade(_signGrade), execGrade(_execGrade)
 {
 	if (_signGrade < 1)
 		throw AForm::GradeTooHighException();

@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 15:31:40 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/06/02 10:58:05 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/06/09 13:32:17 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 #include <iostream>
 #include <string>
 #include <exception>
+
+class Form;
 
 class Bureaucrat
 {
@@ -45,6 +47,7 @@ class Bureaucrat
 		/* Increment / Decrement grades */
 		void	incrementGrade( void );
 		void	decrementGrade( void );
+		void	signForm( Form& form ) const;
 
 		/* Getters */
 		std::string const getName( void ) const;

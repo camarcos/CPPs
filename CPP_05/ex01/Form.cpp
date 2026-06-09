@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 11:39:11 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/06/03 13:43:54 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/06/09 13:46:12 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /* Orthodox Canonical Class Form */
 Form::Form(): _name("Default"), _isSigned(false), _signGrade(1), _execGrade(1) {}
 
-Form::Form( std::string _name, int _signGrade, int _execGrade ): _name(_name), _signGrade(_signGrade), _execGrade(_execGrade)
+Form::Form( std::string _name, int _signGrade, int _execGrade ): _name(_name), _isSigned(false), _signGrade(_signGrade), _execGrade(_execGrade)
 {
 	if (_signGrade < 1)
 		throw Form::GradeTooHighException();
