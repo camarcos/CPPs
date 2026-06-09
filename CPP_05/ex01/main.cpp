@@ -6,45 +6,58 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 15:31:47 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/05/21 17:55:18 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/06/08 17:34:00 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
-int main()
+int	main(void)
 {
-	try
-	{
-		Bureaucrat b1("Off limit", 0);
-		std::cout << b1 << std::endl;
-	}
-	catch (Bureaucrat::GradeTooHighException& e)
-	{
-		std::cout << "Error: " << e.what() << std::endl;
-	}
-	
-	Bureaucrat b2("In limit", 1);
-	std::cout << b2 << std::endl;
+    try
+    {
+        Bureaucrat bad("Bad", 0);
+        std::cout << bad << std::endl;
+    }
+    catch (std::exception& e)
+    {
+        std::cout << "Bureaucrat error: " << e.what() << std::endl;
+    }
 
-	Bureaucrat b3("Paula", 23);
-	std::cout << b3 << std::endl;
+    try
+    {
+        Form badForm("BadForm", 0, 10);
+        std::cout << badForm << std::endl;
+    }
+    catch (std::exception& e)
+    {
+        std::cout << "Form error: " << e.what() << std::endl;
+    }
 
-	Bureaucrat b4("Nadal", 123);
-	std::cout << b4 << std::endl;
+    Bureaucrat worker("Worker", 100);
+    Bureaucrat boss("Boss", 1);
+    Form tax("Tax", 50, 25);
 
-	Bureaucrat b5("In limit", 150);
-	std::cout << b5 << std::endl;
+    try
+    {
+        tax.beSigned(worker);
+    }
+    catch (std::exception& e)
+    {
+        std::cout << "Worker sign error: " << e.what() << std::endl;
+    }
 
-	try
-	{
-		Bureaucrat b6("Off limit", 151);
-		std::cout << b6 << std::endl;
-	}
-	catch(Bureaucrat::GradeTooLowException& e)
-	{
-		std::cout << "Error: " << e.what() << std::endl;
-	}
-	
-	return 0;
+    try
+    {
+        tax.beSigned(boss);
+        std::cout << "Boss signed successfully" << std::endl;
+    }
+    catch (std::exception& e)
+    {
+        std::cout << "Boss sign error: " << e.what() << std::endl;
+    }
+
+    std::cout << tax << std::endl;
+    return 0;
 }
