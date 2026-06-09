@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 11:14:53 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/06/05 11:19:41 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/06/09 10:47:40 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ Intern::Intern() {}
 
 Intern::Intern( const Intern& other ) { *this = other; }
 
-Intern& Intern::operator=( const Intern& other ) {
+Intern& Intern::operator=( const Intern& other )
+{
 	(void)other;
 	return *this;
 }
@@ -25,30 +26,35 @@ Intern& Intern::operator=( const Intern& other ) {
 Intern::~Intern() {}
 
 /* Exceptions */
-const char* Intern::NoTargetSpecifiedExcepcion::what() const throw() {
+const char* Intern::NoTargetSpecifiedExcepcion::what() const throw()
+{
 	return "the target of the form is empty";
 }
 
-const char* Intern::FormNotFoundExcepcion::what() const throw() {
+const char* Intern::FormNotFoundExcepcion::what() const throw()
+{
 	return "Intern cannot find the proper form";
 }
 
 /* Make forms */
-AForm* Intern::makeSCF( std::string& target) {
+AForm* Intern::makeSCF( std::string& target)
+{
 	return (new ShrubberyCreationForm( target ));
 }
 
-AForm* Intern::makeRRF( std::string& target) {
+AForm* Intern::makeRRF( std::string& target)
+{
 	return (new RobotomyRequestForm( target ));
 }
 
-AForm* Intern::makePPF( std::string& target) {
+AForm* Intern::makePPF( std::string& target)
+{
 	return (new PresidentialPardonForm( target ));
 }
 
-
 /* Public Methods */
-AForm* Intern::makeForm( std::string name, std::string target ) {
+AForm* Intern::makeForm( std::string name, std::string target )
+{
 
 	if (target.empty())
 		throw Intern::NoTargetSpecifiedExcepcion();
@@ -57,17 +63,18 @@ AForm* Intern::makeForm( std::string name, std::string target ) {
 	std::string stringArr[3] = { "shrubbery creation", "robotomy request", "presidential pardon" };
 
 	int i = 0;
-	while (name[i]) {
+	while (name[i])
+	{
 		name[i] = std::tolower(name[i]);
 		i++;
 	}
 
 	for (int j = 0; j < 3; j++) {
-		if (name.compare( stringArr[j] ) == 0) {
+		if (name.compare( stringArr[j] ) == 0)
+		{
 			std::cout << "Inter creates " << stringArr[j] << " form.\n";
-			return (this->*function[j])( target );		
+			return (this->*function[j])( target );
 		}
 	}
-
 	throw Intern::FormNotFoundExcepcion();
 }

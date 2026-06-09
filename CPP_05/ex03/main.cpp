@@ -6,45 +6,89 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 15:31:47 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/05/21 17:55:18 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/06/09 10:55:18 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "AForm.hpp"
+#include "Intern.hpp"
+#include <cstdlib>
+#include <ctime>
 
 int main()
 {
+	srand(time(NULL));
+
+	std::cout << "\n--- CREANDO OBJETOS ---" << std::endl;
+	Intern someRandomIntern;
+	Bureaucrat boss("Boss", 1);
+	AForm* form = NULL;
+
+	std::cout << "\n--- TEST 1: ROBOTOMY REQUEST FORM ---" << std::endl;
 	try
 	{
-		Bureaucrat b1("Off limit", 0);
-		std::cout << b1 << std::endl;
+		form = someRandomIntern.makeForm("robotomy request", "Ben");
+		if (form)
+		{
+			boss.signForm(*form);
+			boss.executeForm(*form);
+			delete form;
+		}
 	}
-	catch (Bureaucrat::GradeTooHighException& e)
+	catch (std::exception& e)
 	{
-		std::cout << "Error: " << e.what() << std::endl;
+		std::cout << e.what() << std::endl;
 	}
-	
-	Bureaucrat b2("In limit", 1);
-	std::cout << b2 << std::endl;
 
-	Bureaucrat b3("Paula", 23);
-	std::cout << b3 << std::endl;
-
-	Bureaucrat b4("Nadal", 123);
-	std::cout << b4 << std::endl;
-
-	Bureaucrat b5("In limit", 150);
-	std::cout << b5 << std::endl;
-
+	std::cout << "\n--- TEST 2: SHRUBBERY CREATION FORM ---" << std::endl;
 	try
 	{
-		Bureaucrat b6("Off limit", 151);
-		std::cout << b6 << std::endl;
+		form = someRandomIntern.makeForm("shrubbery creation", "Jardin");
+		if (form)
+		{
+			boss.signForm(*form);
+			boss.executeForm(*form);
+			delete form;
+		}
 	}
-	catch(Bureaucrat::GradeTooLowException& e)
+	catch (std::exception& e)
 	{
-		std::cout << "Error: " << e.what() << std::endl;
+		std::cout << e.what() << std::endl;
 	}
-	
+
+	std::cout << "\n--- TEST 3: PRESIDENTIAL PARDON FORM ---" << std::endl;
+	try
+	{
+		form = someRandomIntern.makeForm("presidential pardon", "Arthur");
+		if (form)
+		{
+			boss.signForm(*form);
+			boss.executeForm(*form);
+			delete form;
+		}
+	}
+	catch (std::exception& e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+
+	std::cout << "\n--- TEST 4: FORMULARIO INVENTADO (ERROR ESPERADO) ---" << std::endl;
+	try
+	{
+		form = someRandomIntern.makeForm("Form random", "Office");
+		if (form)
+		{
+			boss.signForm(*form);
+			boss.executeForm(*form);
+			delete form;
+		}
+	}
+	catch (std::exception& e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+
+	std::cout << "\n--- DESTRUCTORES ---" << std::endl;
 	return 0;
 }
