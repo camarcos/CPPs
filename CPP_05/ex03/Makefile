@@ -6,7 +6,7 @@
 #    By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/05/21 15:31:50 by carolinamc        #+#    #+#              #
-#    Updated: 2026/06/05 13:47:34 by carolinamc       ###   ########.fr        #
+#    Updated: 2026/06/10 13:48:18 by carolinamc       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,6 +67,7 @@ clean:
 fclean: clean
 	@echo "$(BLUE)Removing binary files...$(CLEAR)"
 	$(RM) $(NAME)
+	$(RM) *_shrubbery
 	@echo "$(GREEN)Object files and binary removed correctly$(CLEAR)"
 
 re: fclean all
