@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 15:31:40 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/06/05 12:57:51 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/06/22 09:00:40 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Bureaucrat
 	public:
 		/* Orthodox Canonical Class Form */
 		Bureaucrat();
-		Bureaucrat( const std::string& _name, int _grade = 150 );
+		Bureaucrat( const std::string& _name, int _grade );
 		Bureaucrat( const Bureaucrat& other );
 		Bureaucrat& operator=( const Bureaucrat& other );
 		~Bureaucrat();

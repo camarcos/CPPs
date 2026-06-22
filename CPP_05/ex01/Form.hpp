@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 11:39:20 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/06/09 13:32:44 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/06/22 09:00:11 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Form
 	public:
 		/* Orthodox Canonical Class Form */
 		Form();
-		Form( std::string _name, int _signGrade = 1, int _execGrade = 1 );
+		Form( std::string _name, int _signGrade, int _execGrade );
 		Form ( const Form& other );
 		Form& operator=( const Form& other );
 		~Form();

@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/04 12:07:30 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/06/09 13:26:11 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/06/22 09:00:26 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class AForm
 	public:
 		/* Orthodox Canonical Class Form */
 		AForm();
-		AForm( std::string _name, std::string _target, int _signGrade = 1, int _execGrade = 1 );
+		AForm( std::string _name, std::string _target, int _signGrade, int _execGrade );
 		AForm ( const AForm& other );
 		AForm& operator=( const AForm& other );
 		virtual ~AForm();
