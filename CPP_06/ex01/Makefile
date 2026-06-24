@@ -6,7 +6,7 @@
 #    By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/24 15:36:55 by carolinamc        #+#    #+#              #
-#    Updated: 2026/06/24 15:39:00 by carolinamc       ###   ########.fr        #
+#    Updated: 2026/06/24 16:43:15 by carolinamc       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ CLEAR	=		\033[0m
 ################################################################################
 
 # SOURCE
-SRC			=	ScalarTypes.cpp \
+SRC			=	Serializer.cpp \
 				main.cpp
 
 # OBJECTS

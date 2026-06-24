@@ -6,27 +6,25 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/24 15:40:00 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/06/24 15:41:30 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/06/24 17:18:20 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "Serializer.hpp"
 
-#include <iostream>
-#include <iomanip>
-#include <string>
-#include <cctype>
-#include <exception>
+Serializer::Serializer() {}
 
-class Serializer
+Serializer::Serializer(const Serializer &other) { (void)other; }
+
+Serializer::~Serializer() {}
+
+Serializer &Serializer::operator=(const Serializer &other) { (void)other; return *this; }
+
+uintptr_t Serializer::serialize(Data* ptr)
 {
-	private:
-		Serializer();
-		Serializer(const Serializer &other);
-		Serializer &operator=(const Serializer &other);
-		~Serializer();
-		
-	public:
-		static uintptr_t serialize(Data* ptr);
-		static Data* deserialize(uintptr_t raw);
-};
+	return reinterpret_cast<uintptr_t>(ptr);
+}
+Data* Serializer::deserialize(uintptr_t raw)
+{
+	return reinterpret_cast<Data*>(raw);
+}
