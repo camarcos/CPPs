@@ -6,7 +6,7 @@
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/09 11:10:53 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/06/24 15:32:09 by carolinamc       ###   ########.fr       */
+/*   Updated: 2026/06/24 15:50:33 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void printChar(char ch)
 	if (ch < 32 || ch > 126)
 		std::cout << "char: Non displayable" << std::endl;
 	else
-		std::cout << "char: " << ch << std::endl;
+		std::cout << "char: '" << ch << "'" << std::endl;
 }
 
 void ScalarTypes::convert(std::string input)
@@ -106,6 +106,6 @@ bool ScalarTypes::specialcases(std::string input)
 		std::cout << "double: -inf" << std::endl;
 	}
 	else
-		throw(std::invalid_argument("Non displayable"));
+		return false;
 	return true;
 }

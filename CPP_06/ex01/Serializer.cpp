@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScalarTypes.hpp                                    :+:      :+:    :+:   */
+/*   Serializer.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/09 11:10:56 by carolinamc        #+#    #+#             */
-/*   Updated: 2026/06/24 15:52:23 by carolinamc       ###   ########.fr       */
+/*   Created: 2026/06/24 15:40:00 by carolinamc        #+#    #+#             */
+/*   Updated: 2026/06/24 15:41:30 by carolinamc       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,15 @@
 #include <cctype>
 #include <exception>
 
-class ScalarTypes
+class Serializer
 {
 	private:
-		ScalarTypes();
-		ScalarTypes(const ScalarTypes &other);
-		ScalarTypes &operator=(const ScalarTypes &other);
-		~ScalarTypes();
-
+		Serializer();
+		Serializer(const Serializer &other);
+		Serializer &operator=(const Serializer &other);
+		~Serializer();
+		
 	public:
-		static void convert(std::string input);
-		static bool specialcases(std::string input);
+		static uintptr_t serialize(Data* ptr);
+		static Data* deserialize(uintptr_t raw);
 };

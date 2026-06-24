@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/06/09 11:02:40 by carolinamc        #+#    #+#              #
-#    Updated: 2026/06/24 15:44:10 by carolinamc       ###   ########.fr        #
+#    Created: 2026/06/24 15:36:55 by carolinamc        #+#    #+#              #
+#    Updated: 2026/06/24 15:39:00 by carolinamc       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 # COMPILER OPTIONS
 ################################################################################
 
-NAME		=	Conversion
+NAME		=	Serialization
 CXX			=	c++
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 RM			=	rm -rf
