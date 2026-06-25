@@ -6,7 +6,7 @@
 #    By: carolinamc <carolinamc@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/24 17:26:29 by carolinamc        #+#    #+#              #
-#    Updated: 2026/06/24 18:19:20 by carolinamc       ###   ########.fr        #
+#    Updated: 2026/06/25 10:20:17 by carolinamc       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,10 @@ CLEAR	=		\033[0m
 
 # SOURCE
 SRC			=	Base.cpp \
-				main.cpp
+				main.cpp \
+				A.cpp \
+				B.cpp \
+				C.cpp
 
 # OBJECTS
 OBJ_DIR		=	objs/
